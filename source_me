@@ -1,0 +1,14 @@
+OUT_DIR="./output"
+
+MY_NAME="key-a"
+MY_PUB_KEY="${OUT_DIR}/${MY_NAME}.gpg.pub"
+MY_SEC_KEY="${OUT_DIR}/${MY_NAME}.gpg.sec"
+
+KEY_RING="${OUT_DIR}/my.keyring"
+FILE_TO_ENCRYPT="SAMPLE.txt"
+FILE_TO_DECRYPT="${OUT_DIR}/${FILE_TO_ENCRYPT}.pgp"
+OUTPUT_DECRYPT="${OUT_DIR}/${FILE_TO_ENCRYPT}"
+
+if [ ! -d ${OUT_DIR} ]; then
+    mkdir ${OUT_DIR}
+fi
